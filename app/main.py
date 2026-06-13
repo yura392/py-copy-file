@@ -10,7 +10,8 @@ def copy_file(command: str) -> None:
         return
 
     try:
-        with open(source_file_name, "r") as file_in, open(destination_file_name, "w") as file_out:
+        with open(source_file_name, "r") as file_in, \
+                open(destination_file_name, "w") as file_out:
             content = file_in.read()
             file_out.write(content)
     except FileNotFoundError:
